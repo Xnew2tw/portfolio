@@ -24,10 +24,30 @@ portfolio/
 ├── .github/
 │   └── workflows/
 │       └── deploy.yml    # la compilation du Sass et la publication sur GitHub Pages
-├── .gitignore            # la liste des éléments ignorés par Git, car reconstructibles : node_modules/, style.css, style.css.map
+├── .gitignore            # les éléments ignorés par Git, car reconstructibles : node_modules/, style.css, style.css.map
 ├── index.html            # la page d'accueil
 ├── package.json          # la fiche d'identité du projet pour npm
 ├── package-lock.json     # les versions exactes des paquets installés
 └── sass/
     └── style.scss        # la feuille de style que j'écris
 ```
+
+## Construire le site sur son ordinateur
+
+Prérequis :
+- Git (vérification : `git --version`).
+- Node.js, avec npm (vérification : `npm --version`).
+
+1. `git clone https://github.com/Xnew2tw/portfolio.git` : clone le dépôt GitHub dans le dossier courant.
+
+2. `cd portfolio` : entre dans le dossier créé.
+
+3. `npm install` : lit `package.json` et installe les paquets qu'il liste.
+
+4. `npx sass --version` : vérifie que Sass fonctionne.
+
+5. `npx sass sass/style.scss style.css` : compile le Sass en CSS.
+
+6. - `xdg-open index.html` : ouvre la page d'accueil du site sous Linux.
+   - `open index.html` : ouvre la page d'accueil du site sous macOS.
+   - `start index.html` : ouvre la page d'accueil du site sous Windows.
