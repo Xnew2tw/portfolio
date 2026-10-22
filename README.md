@@ -16,3 +16,18 @@ Ce dépôt contient le code source et les ressources que j'ai utilisés dans l'�
 - **GitHub** : héberge une copie du travail en ligne, avec son historique.
 - **GitHub Actions** : exécute un workflow à chaque `git push` pour compiler `sass/style.scss` en `style.css` ; range ensuite `style.css` avec `index.html` dans le dossier `_site`, qu'il transmet à GitHub Pages pour la mise en ligne.
 - **GitHub Pages** : héberge et sert le site une fois celui-ci construit, à chaque nouvelle publication.
+
+## Structure du dépôt
+
+```
+portfolio/
+├── .github/
+│   └── workflows/
+│       └── deploy.yml    # la compilation du Sass et la publication sur GitHub Pages
+├── .gitignore            # la liste des éléments ignorés par Git, car reconstructibles : node_modules/, style.css, style.css.map
+├── index.html            # la page d'accueil
+├── package.json          # la fiche d'identité du projet pour npm
+├── package-lock.json     # les versions exactes des paquets installés
+└── sass/
+    └── style.scss        # la feuille de style que j'écris
+```
