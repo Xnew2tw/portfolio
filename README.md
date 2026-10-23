@@ -24,7 +24,8 @@ portfolio/
 ├── .github/
 │   └── workflows/
 │       └── deploy.yml    # la compilation du Sass et la publication sur GitHub Pages
-├── .gitignore            # les éléments ignorés par Git, car reconstructibles : node_modules/, style.css, style.css.map
+├── .gitignore            # les éléments ignorés par Git, car reconstructibles :
+|                           node_modules/, style.css, style.css.map
 ├── index.html            # la page d'accueil
 ├── package.json          # la fiche d'identité du projet pour npm
 ├── package-lock.json     # les versions exactes des paquets installés
@@ -51,3 +52,23 @@ Prérequis :
 6. - `xdg-open index.html` : ouvre la page d'accueil du site sous Linux.
    - `open index.html` : ouvre la page d'accueil du site sous macOS.
    - `start index.html` : ouvre la page d'accueil du site sous Windows.
+
+## Publication
+
+Le workflow reçoit l'autorisation de lire le dépôt, d'écrire sur GitHub Pages et de prouver son identité au déploiement. Voici les étapes de la publication du site par le workflow, à chaque `git push` sur la branche `main` du dépôt.
+
+1. Construction du site, sur une machine virtuelle sous Linux :
+   - récupère le contenu du dépôt.
+   - installe Node.js (version 24).
+   - installe, avec `npm ci`, les versions exactes notées dans `package-lock.json` et s'arrête en cas d'incohérence.
+   - compile le Sass en CSS, sans produire de carte des correspondances (option `--no-source-map`).
+   - crée un dossier `_site` destiné à recevoir le site.
+   - copie dans ce dossier `index.html` et `style.css`, les seuls fichiers nécessaires au visiteur.
+   - emballe le dossier `_site` sous forme d'artefact et le confie à GitHub pour que la tâche suivante le retrouve.
+
+2. Publication du site, via une nouvelle machine virtuelle, elle aussi sous Linux :
+   - démarre à condition que la construction ait réussi.
+   - récupère `_site`, emballé lors de la dernière étape de construction, pour commencer son travail.
+   - met en ligne le contenu de `_site` sur GitHub Pages, qui le sert ensuite au visiteur.
+
+Cette publication du site est rendue possible par le réglage de "Pages" sur "GitHub Actions" ("Settings" > "Pages"). Une fois la publication faite, le workflow en garde la trace dans l'onglet "Actions" de GitHub et affiche l'adresse du site comme un lien cliquable sous la case de la tâche `publication`, située dans chaque résumé d'une exécution.
