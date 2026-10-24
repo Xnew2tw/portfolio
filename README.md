@@ -21,16 +21,24 @@ Ce dépôt contient le code source et les ressources que j'ai utilisés dans l'�
 
 ```
 portfolio/
+├── fonts/                         # les polices du site (WOFF2) et leurs licences
+│   ├── baloo-2/
+│   │   ├── baloo-2.woff2
+│   │   └── OFL.txt
+│   └── nunito/
+│       ├── nunito-italic.woff2
+│       ├── nunito.woff2
+│       └── OFL.txt
 ├── .github/
 │   └── workflows/
-│       └── deploy.yml    # la compilation du Sass et la publication sur GitHub Pages
-├── .gitignore            # les éléments ignorés par Git, car reconstructibles :
-|                           node_modules/, style.css, style.css.map
-├── index.html            # la page d'accueil
-├── package.json          # la fiche d'identité du projet pour npm
-├── package-lock.json     # les versions exactes des paquets installés
+│       └── deploy.yml             # la compilation du Sass et la publication sur GitHub Pages
+├── .gitignore                     # les éléments ignorés par Git, car reconstructibles :
+|                                  node_modules/, style.css, style.css.map
+├── index.html                     # la page d'accueil
+├── package.json                   # la fiche d'identité du projet pour npm
+├── package-lock.json              # les versions exactes des paquets installés
 └── sass/
-    └── style.scss        # la feuille de style que j'écris
+    └── style.scss                 # la feuille de style que j'écris
 ```
 
 ## Construire le site sur son ordinateur
@@ -72,3 +80,21 @@ Le workflow reçoit l'autorisation de lire le dépôt, d'écrire sur GitHub Page
    - met en ligne le contenu de `_site` sur GitHub Pages, qui le sert ensuite au visiteur.
 
 Cette publication du site est rendue possible par le réglage de "Pages" sur "GitHub Actions" ("Settings" > "Pages"). Une fois la publication faite, le workflow en garde la trace dans l'onglet "Actions" de GitHub et affiche l'adresse du site comme un lien cliquable sous la case de la tâche `publication`, située dans chaque résumé d'une exécution.
+
+## Ressources utilisées
+
+Baloo 2 :
+- auteur : Copyright 2019 The Baloo 2 Project Authors ([voir le dépôt des auteurs](https://github.com/EkType/Baloo2)).
+- licence : SIL Open Font License 1.1 ([voir le site officiel de la licence](https://openfontlicense.org)).
+- emplacement : `portfolio/fonts/baloo-2/OFL.txt`.
+- source : [voir la police sur Google Fonts](https://fonts.google.com/specimen/Baloo+2).
+
+Nunito :
+- auteur : Copyright 2014 The Nunito Project Authors ([voir le dépôt des auteurs](https://github.com/googlefonts/nunito)).
+- licence : SIL Open Font License 1.1 ([voir le site officiel de la licence](https://openfontlicense.org)).
+- emplacement : `portfolio/fonts/nunito/OFL.txt`.
+- source : [voir la police sur Google Fonts](https://fonts.google.com/specimen/Nunito).
+
+Les fichiers des polices ont été convertis de `.ttf` en `.woff2`.
+
+Les polices ne sont pas chargées depuis Google mais hébergées dans le dépôt, afin que l'adresse IP du visiteur ne soit pas transmise à un tiers.

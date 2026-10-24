@@ -4,7 +4,42 @@ $bleu-astral: #075FE4;
 $bleu-ciel: #16CAF2;
 $blanc-astro: #FEFEFE;
 
+@font-face {
+    font-family: "Baloo 2";
+    src: url("fonts/baloo-2/baloo-2.woff2") format("woff2");
+    font-weight: 400 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Nunito";
+    src: url("fonts/nunito/nunito.woff2") format("woff2");
+    font-weight: 200 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Nunito";
+    src: url("fonts/nunito/nunito-italic.woff2") format("woff2");
+    font-weight: 200 900;
+    font-style: italic;
+    font-display: swap;
+}
+
 body {
     background-color: $bleu-astral;
     color: $blanc-astro;
+    font-family: "Nunito", sans-serif;
+}
+
+h1 {
+    font-family: "Baloo 2", sans-serif;
+    font-weight: 700;
+}
+
+h2, h3 {
+    font-family: "Baloo 2", sans-serif;
+    font-weight: 600;
 }
