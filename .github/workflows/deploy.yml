@@ -21,7 +21,7 @@ jobs:
       - run: npx sass --no-source-map sass/style.scss style.css
       - run: |
           mkdir _site
-          cp -R index.html style.css fonts/ _site/
+          cp -R index.html projets.html parcours.html contact.html style.css fonts/ _site/
       - uses: actions/upload-pages-artifact@v5
         with:
           path: _site

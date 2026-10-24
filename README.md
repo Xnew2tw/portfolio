@@ -14,7 +14,7 @@ Ce dépôt contient le code source et les ressources que j'ai utilisés dans l'�
 - **npm** : télécharge Sass et l'inscrit dans `package.json` ; crée deux éléments : le dossier `node_modules`, qui contient le code de Sass et de ses dépendances, et le fichier `package-lock.json`, qui note la version exacte de chaque paquet installé.
 - **Git** : conserve l'historique du travail sur mon ordinateur.
 - **GitHub** : héberge une copie du travail en ligne, avec son historique.
-- **GitHub Actions** : exécute un workflow à chaque `git push` pour compiler `sass/style.scss` en `style.css` ; range ensuite `style.css` avec `index.html` dans le dossier `_site`, qu'il transmet à GitHub Pages pour la mise en ligne.
+- **GitHub Actions** : exécute un workflow à chaque `git push` pour compiler `sass/style.scss` en `style.css` ; range ensuite `style.css` avec les pages du site dans le dossier `_site`, qu'il transmet à GitHub Pages pour la mise en ligne.
 - **GitHub Pages** : héberge et sert le site une fois celui-ci construit, à chaque nouvelle publication.
 
 ## Structure du dépôt
@@ -35,6 +35,9 @@ portfolio/
 ├── .gitignore                     # les éléments ignorés par Git, car reconstructibles :
 |                                  node_modules/, style.css, style.css.map
 ├── index.html                     # la page d'accueil
+├── projets.html                   # la page des détails des projets
+├── parcours.html                  # la page de présentation de mon parcours
+├── contact.html                   # la page du formulaire de contact
 ├── package.json                   # la fiche d'identité du projet pour npm
 ├── package-lock.json              # les versions exactes des paquets installés
 └── sass/
