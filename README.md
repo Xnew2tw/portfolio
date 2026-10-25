@@ -17,6 +17,7 @@ Ce dépôt contient le code source et les ressources que j'ai utilisés dans l'�
 - **GitHub** : héberge une copie du travail en ligne, avec son historique.
 - **GitHub Actions** : exécute un workflow à chaque `git push` pour compiler `sass/style.scss` en `style.css` ; range ensuite `style.css` avec les pages du site dans le dossier `_site`, qu'il transmet à GitHub Pages pour la mise en ligne.
 - **GitHub Pages** : héberge et sert le site une fois celui-ci construit, à chaque nouvelle publication.
+- **Form.taxi** : reçoit les messages du formulaire de contact et me les transmets par email (service autrichien, serveurs dans l'Union européenne).
 
 ## Structure du dépôt
 
