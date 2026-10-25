@@ -43,3 +43,32 @@ h2, h3 {
     font-family: "Baloo 2", sans-serif;
     font-weight: 600;
 }
+
+// Bloc header
+
+.header {
+    text-align: center;
+}
+
+// Bloc menu
+
+.menu {
+
+    &__list {
+        display: flex;
+        list-style-type: none;
+        gap: 1.5rem;
+        padding-inline-start: 0;
+        justify-content: center;
+    }
+
+    &__link {
+        color: $blanc-astro;
+        text-decoration: none;
+
+        &[aria-current="page"] {
+            text-decoration: underline;
+            font-weight: 700;
+        }
+    }
+}
