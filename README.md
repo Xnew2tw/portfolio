@@ -10,6 +10,7 @@ Ce dépôt contient le code source et les ressources que j'ai utilisés dans l'�
 
 - **HTML** : établit la structure des pages.
 - **Sass** : compile `sass/style.scss` en `style.css` (CSS sans framework) ; enregistre les couleurs sous forme de variables.
+- **BEM** : convention de nommage des classes CSS en trois parties : Bloc, Élément, Modificateur.
 - **Node.js** : exécute du JavaScript en dehors du navigateur et permet l'utilisation de Sass.
 - **npm** : télécharge Sass et l'inscrit dans `package.json` ; crée deux éléments : le dossier `node_modules`, qui contient le code de Sass et de ses dépendances, et le fichier `package-lock.json`, qui note la version exacte de chaque paquet installé.
 - **Git** : conserve l'historique du travail sur mon ordinateur.
@@ -29,6 +30,10 @@ portfolio/
 │       ├── nunito-italic.woff2
 │       ├── nunito.woff2
 │       └── OFL.txt
+├── cv/
+│   └── cv-xavier-ammar.pdf        # le CV au format PDF
+├── photo/
+│   └── photo-xavier-ammar.jpg     # la photo de l'accueil
 ├── .github/
 │   └── workflows/
 │       └── deploy.yml             # la compilation du Sass et la publication sur GitHub Pages

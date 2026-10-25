@@ -48,6 +48,24 @@ h2, h3 {
 
 .header {
     text-align: center;
+
+    &__photo {
+        display: block;
+        margin: auto;
+        width: 10rem;
+        height: auto;
+        border-radius: 50%;
+    }
+
+    &__cv {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+    }
+
+    &__cv-link {
+       color: $blanc-astro;
+    }
 }
 
 // Bloc menu
