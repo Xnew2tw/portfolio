@@ -44,6 +44,10 @@ h2, h3 {
     font-weight: 600;
 }
 
+a {
+    color:$blanc-astro;
+}
+
 // Bloc header
 
 .header {
@@ -62,10 +66,6 @@ h2, h3 {
         gap: 1.5rem;
         justify-content: center;
     }
-
-    &__cv-link {
-       color: $blanc-astro;
-    }
 }
 
 // Bloc menu
@@ -81,7 +81,6 @@ h2, h3 {
     }
 
     &__link {
-        color: $blanc-astro;
         text-decoration: none;
 
         &[aria-current="page"] {
