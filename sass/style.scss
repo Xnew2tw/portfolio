@@ -4,6 +4,8 @@ $bleu-astral: #075FE4;
 $bleu-ciel: #16CAF2;
 $blanc-astro: #FEFEFE;
 
+$largeur-max-contenu: min(90vw, 75ch);
+
 @font-face {
     font-family: "Baloo 2";
     src: url("fonts/baloo-2/baloo-2.woff2") format("woff2");
@@ -32,6 +34,11 @@ body {
     background-color: $bleu-astral;
     color: $blanc-astro;
     font-family: "Nunito", sans-serif;
+}
+
+main {
+    max-width: $largeur-max-contenu;
+    margin: 0 auto;
 }
 
 h1 {
